@@ -5,7 +5,9 @@ import Leftbar from "../LeftBar/Leftbar";
 import Midbar from "../Midbar/Midbar";
 import RightBar from "../RightBar/RightBar";
 
+
 const Home = () => {
+
     return (
         <div>
             <Top></Top>
