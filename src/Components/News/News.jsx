@@ -36,7 +36,7 @@ const News = ({ aNews }) => {
       <div className="news pb-16 mb-7  border-[2px] b border-[#F3F3F3] relative">
         <div className="news-profile flex justify-between items-center  min-h-20 p-5 bg-[#F3F3F3]">
           <div className="flex items-center gap-4">
-            <img className='w-5 h-5' src={img} alt="Author" />
+            <img className='w-10 h-10  rounded-full ' src={img} alt="Author" />
             <div className="text">
               <h3 className='text-base font-medium text-[#403F3F]'>{name}</h3>
               <h2 className='text-sm font-light text-[#706F6F]'>{date}</h2>

@@ -13,6 +13,17 @@
     color: white;
   
 }
+.LogOutBtn {
+    font-size: 16px;
+    padding:0.3em 1.6em ;
+    background: #403F3F;
+    color: white;
+  
+}
+.LogOutBtn:hover {
+    color: rgba(255, 255, 255, 0.724);
+
+}
 .btnM{
     font-size: 20px;
     padding:0.3em 1.4em ;
@@ -27,4 +38,30 @@
     border-radius: 5px;
 border: 1px solid  #E7E7E7;
 
+}
+.withBtn{
+    font-size: 15px;
+    width: 100%;
+    min-height: 40px;
+    border: 1.5px solid currentColor;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.socialBtn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 20px;
+   
+}
+.socialBtn:hover{
+    background: #d0cece31;
+}
+.withBtn:hover{
+    background: #d0cece31;
 }

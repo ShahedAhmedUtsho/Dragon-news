@@ -1,15 +1,27 @@
 import { NavLink } from "react-router-dom";
-import user from "../../assets/user.png"
+import ProfilePng from "../../assets/user.png"
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 const Header = () => {
+  const {user,logOut} =useContext(AuthContext)
     const list = <>
     <li>  <NavLink to='/'>Home</NavLink>  </li>
     <li>  <NavLink to='/about'>About</NavLink>  </li>
     <li>  <NavLink to='/career'>career</NavLink>  </li>
     </> 
 
-    
-        
+    const avatarCheck = () =>{
+      if(user){
+        if(user.photoURL){
+          return  <img className="max-w-10 max-h-10 rounded-full" src={user.photoURL} alt="" /> 
+        }else{
+          return user.email
+        }
+       }
+    }
+
+   
     
     return (
         <div>
@@ -31,8 +43,13 @@ const Header = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3 flex">
-    <img className="max-w-10 max-h-10" src={user} alt="" />
-    <a  className=" navBtn">Login</a>
+{
+  user ? avatarCheck() :  <img className="max-w-10 max-h-10 rounded-full" src={ProfilePng} alt="" />
+}
+   {
+    user ?<a onClick={logOut}  className=" underline font-light  LogOutBtn">LogOut</a> : <a  className=" navBtn">Login</a>
+   }
+    
   </div>
 </div>
         </div>
