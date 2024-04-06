@@ -11,6 +11,12 @@ const RightBar = () => {
 
 
 
+
+console.log("hello")
+
+
+
+
     return (
         <div className=" h-full">
             <div className="loginWith  mb-10">
