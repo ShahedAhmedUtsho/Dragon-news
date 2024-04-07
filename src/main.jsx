@@ -10,6 +10,9 @@ import Home from './Components/Home/Home';
 import About from './Components/About/About';
 import Career from './Components/Career/Career';
 import AuthProvider from './AuthProvider/AuthProvider';
+import Login from './Components/Login/login';
+import Register from './Components/Register/Register';
+import NewsDetails from './Components/NewsDetails/NewsDetails';
 
 
 const router = createBrowserRouter([
@@ -30,6 +33,21 @@ const router = createBrowserRouter([
         path:"/career",
         element: <Career></Career>
       },
+      {
+        path:"/login",
+       element: <Login></Login>,
+
+      } ,
+      {
+        path:"/register",
+       element: <Register></Register>,
+
+      },{
+        path:"/news/:NewsId",
+        loader:()=> fetch(`/news.json`),
+        element: <NewsDetails></NewsDetails>,
+
+      }
     ]
   },
 ]);

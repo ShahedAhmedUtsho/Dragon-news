@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ProfilePng from "../../assets/user.png"
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -14,7 +14,7 @@ const Header = () => {
     const avatarCheck = () =>{
       if(user){
         if(user.photoURL){
-          return  <img className="max-w-10 max-h-10 rounded-full" src={user.photoURL} alt="" /> 
+          return  <img className="w-10 object-cover h-10 rounded-full" src={user.photoURL} alt="profile pic" /> 
         }else{
           return user.email
         }
@@ -25,7 +25,7 @@ const Header = () => {
     
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ const Header = () => {
       {list}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"></a>
+    <a className=" text-xl"></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -44,10 +44,10 @@ const Header = () => {
   </div>
   <div className="navbar-end gap-3 flex">
 {
-  user ? avatarCheck() :  <img className="max-w-10 max-h-10 rounded-full" src={ProfilePng} alt="" />
+  user ? avatarCheck() :  <img className="w-10 h-10 rounded-full" src={ProfilePng} alt="" />
 }
    {
-    user ?<a onClick={logOut}  className=" underline font-light  LogOutBtn">LogOut</a> : <a  className=" navBtn">Login</a>
+    user ?<a onClick={logOut}  className=" underline font-light  LogOutBtn">LogOut</a> : <Link to="/login"  className=" navBtn">Login</Link>
    }
     
   </div>

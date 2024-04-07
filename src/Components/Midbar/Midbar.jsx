@@ -5,6 +5,7 @@ const Midbar = () => {
     return (
         <div className="  h-full">
              <h3 className=" text-xl font-medium mb-5">Dragon News Home</h3>
+             
              {
                 news.map((aNews,index)=> <News aNews={aNews} key={index}></News>)
              }

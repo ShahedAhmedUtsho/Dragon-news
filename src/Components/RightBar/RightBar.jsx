@@ -12,8 +12,6 @@ const RightBar = () => {
 
 
 
-console.log("hello")
-
 
 
 

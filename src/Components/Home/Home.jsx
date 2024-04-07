@@ -9,7 +9,10 @@ import RightBar from "../RightBar/RightBar";
 const Home = () => {
 
     return (
-        <div>
+        <div className='max-w-[1240px] mx-auto'>
+            
+            
+            <div>
             <Top></Top>
             <div className="my-5 gap-1 p-4 bg-[#F3F3F3] flex items-center">
                 <a className="btnM">Latest</a>
@@ -40,6 +43,8 @@ const Home = () => {
             </div>
             
         </div>
+            </div>
+       
     );
 };
 
